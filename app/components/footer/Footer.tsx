@@ -92,7 +92,7 @@ const Footer = () => {
           </Link>
           . All Rights Reserved | Developed By Yaniss Besson EI |{" "}
           <Link
-            href="/mentions-légales"
+            href="/mentions-legales"
             className="hover:underline text-blue-600"
           >
             Mentions Légales

@@ -7,7 +7,7 @@ import TalkAboutUs from "./components/talkAboutUs/TalkAboutUs";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div>
       <HeroCarousel />
       <div className="-mt-4 relative">
         <About />

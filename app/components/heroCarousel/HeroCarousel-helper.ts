@@ -40,6 +40,6 @@ export const heroCarouselData = [
       "Désinfection / Inspection des composants",
     ],
     backgroundImage: "/assets/herocarousel/herocarousel-bg-4.png",
-    href: "/nettoyages-hottes-de-cuisines",
+    href: "/nettoyage-hottes-de-cuisines",
   },
 ];

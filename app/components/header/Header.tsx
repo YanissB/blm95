@@ -7,11 +7,14 @@ import LogoBLM from "../../../public/assets/header/LogoBLM.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hasMounted, setHasMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setHasMounted(true);
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setMenuOpen(false);
@@ -23,6 +26,8 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  if (!isClient) return null;
 
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-[#F1F1F1] relative z-50">
@@ -40,33 +45,30 @@ const Header = () => {
           >
             Nos prestations
           </button>
-          {hasMounted && (
-            <div
-              className={`absolute px-4 ${
-                menuOpen ? "block" : "hidden"
-              } bg-[#F1F1F1]
- shadow-lg rounded-lg`}
+          <div
+            className={`absolute px-4 ${
+              menuOpen ? "block" : "hidden"
+            } bg-[#F1F1F1] shadow-lg rounded-lg`}
+          >
+            <Link
+              href="/ramonage"
+              className="block px-4 py-2 text-[#1E1E1E] hover:text-[#FF6633]"
             >
-              <Link
-                href="/ramonage"
-                className="block px-4 py-2 text-[#1E1E1E] hover:text-[#FF6633]"
-              >
-                Ramonage
-              </Link>
-              <Link
-                href="/vmc"
-                className="block px-4 py-2 text-[#1E1E1E] hover:text-[#FF6633]"
-              >
-                VMC
-              </Link>
-              <Link
-                href="/hottes-cuisine"
-                className="block w-[245px] px-4 py-2 text-[#1E1E1E] hover:text-[#FF6633]"
-              >
-                Hottes de cuisine
-              </Link>
-            </div>
-          )}
+              Ramonage
+            </Link>
+            <Link
+              href="/vmc"
+              className="block px-4 py-2 text-[#1E1E1E] hover:text-[#FF6633]"
+            >
+              VMC
+            </Link>
+            <Link
+              href="/hottes-cuisine"
+              className="block w-[245px] px-4 py-2 text-[#1E1E1E] hover:text-[#FF6633]"
+            >
+              Hottes de cuisine
+            </Link>
+          </div>
         </div>
         <Link
           href="/recrutement"

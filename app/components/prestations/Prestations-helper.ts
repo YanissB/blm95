@@ -18,6 +18,6 @@ export const prestationsHelperData = [
     image: "/assets/home/prestations/prestations-3.png",
     title: "Hottes de cuisine",
     text: "L’entreprise BLM propose des prestations de nettoyage pour lesquelles nos techniciens ont été formés. Cliquez ici pour le découvrir.",
-    href: "/nettoyages-hottes-de-cuisine",
+    href: "/nettoyage-hottes-de-cuisine",
   },
 ];
