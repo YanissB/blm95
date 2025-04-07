@@ -15,7 +15,7 @@ export const heroCarouselData = [
       "Chaudières tout combustibles (fioul, gaz, bois)",
       "Cogénération",
     ],
-    backgroundImage: "/assets/herocarousel/herocarousel-bg-2.png",
+    backgroundImage: "/assets/herocarousel/herocarousel-bg-2.jpeg",
     href: "/ramonage",
   },
   {

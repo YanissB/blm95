@@ -4,8 +4,8 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-[#152E68] text-white p-6 space-y-12">
-      <div className=" mt-6 flex justify-around items-start">
-        <div className="flex items-center">
+      <div className="mt-6 flex flex-col md:flex-row justify-around items-start gap-8 md:gap-0">
+        <div className="w-full md:w-auto text-left px-4">
           <div className="space-y-4">
             <h3 className="text-2xl pb-4 font-bold">Détails du contact</h3>
             <div className="flex items-center space-x-4">
@@ -48,15 +48,17 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <Image
-          src="/assets/footer/LOGO-QUALIBAT.png"
-          alt="Qualibat Logo"
-          width={191}
-          height={200}
-        />
-        <div className="flex-col ">
-          <h3 className="text-2xl pb-10 font-bold">Suivez nous</h3>
-          <div className="flex-col items-center space-y-8">
+        <div className="w-full md:w-auto flex justify-start md:justify-center">
+          <Image
+            src="/assets/footer/LOGO-QUALIBAT.png"
+            alt="Qualibat Logo"
+            width={191}
+            height={200}
+          />
+        </div>
+        <div className="w-full md:w-auto text-left px-4">
+          <h3 className="text-2xl pb-6 md:pb-10 font-bold">Suivez nous</h3>
+          <div className="flex flex-col items-start space-y-6">
             <Link
               href="https://www.facebook.com/souade.belarbia.blm/?locale=fr_FR"
               className="flex items-center space-x-6"
@@ -84,8 +86,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-4">
-        <p>
+      <div className="text-left mt-4 md:mt-12 px-4">
+        <p className="flex flex-wrap justify-start gap-2">
           Copyright 2025 ©{" "}
           <Link href="/" className="hover:underline text-blue-600">
             BLM ramonage et VMC

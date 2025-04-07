@@ -24,9 +24,9 @@ export const accordionData = [
       {
         id: 4,
         question:
-          "Quels sont les avantages économiques d’un entretien régulier des chaudières pour les entreprises ?",
+          "Quels sont les avantages économiques d'un entretien régulier des chaudières pour les entreprises ?",
         answer:
-          "Un entretien régulier des chaudières permet de  réaliser des économies d'énergie substantielles, réduisant ainsi les  coûts d'exploitation. De plus, il limite les risques de panne, évitant  les interruptions d'activité et les frais de réparation. Un équipement  bien entretenu aura une durée de vie plus longue, ce qui diminue les  besoins de remplacement prématuré et réduit les dépenses en capital à  long terme.",
+          "Un entretien régulier des chaudières permet de réaliser des économies d'énergie substantielles, réduisant ainsi les **coûts d'exploitation**. De plus, il limite les risques de panne, évitant  les interruptions d'activité et les frais de réparation. Un équipement  bien entretenu aura une durée de vie plus longue, ce qui diminue les  besoins de remplacement prématuré et réduit les dépenses en capital à  long terme.",
       },
     ],
   },
@@ -69,26 +69,29 @@ export const accordionData = [
         id: 1,
         question:
           "Pourquoi le nettoyage des hottes de cuisine est-il essentiel dans un environnement professionnel ?",
-        answer: "réponse",
+        answer:
+          "Le nettoyage des hottes de cuisine professionnelles est essentiel pour garantir la sécurité et l'hygiène de votre établissement. Une hotte encrassée accumule des graisses inflammables, augmentant le risque d'incendie. De plus, un mauvais entretien peut entraîner une mauvaise évacuation des fumées et des odeurs, affectant la qualité de l'air. Selon la réglementation, les établissements de restauration doivent procéder à un entretien régulier pour respecter les normes d'hygiène et de sécurité. **Notre entreprise spécialisée dans le nettoyage des hottes de cuisine intervient avec du matériel professionnel pour assurer un dégraissage complet et conforme aux normes en vigueur.**",
       },
       {
         id: 2,
         question:
           "À quelle fréquence faut-il nettoyer les hottes de cuisine dans les restaurants ou les cuisines industrielles ?",
-        answer: "réponse",
+        answer:
+          "La fréquence du nettoyage des hottes de cuisine dépend de votre activité et du type de cuisine que vous préparez. **Selon la réglementation, il est recommandé de procéder à un nettoyage complet au moins une fois par an pour les établissements classiques et tous les 3 à 6 mois pour les cuisines à forte production de graisses (fast-foods, grillades, fritures).** Un entretien régulier permet d'éviter l'accumulation de dépôts inflammables et d'assurer un fonctionnement optimal de votre système d'extraction. \n\n**Besoin d'un nettoyage professionnel et conforme aux normes ? Contactez notre équipe spécialisée dès aujourd'hui !**",
       },
       {
         id: 3,
         question:
-          "Quels sont les risques d’une hotte de cuisine mal entretenue ?",
-        answer: "réponse",
+          "Quels sont les risques d'une hotte de cuisine mal entretenue ?",
+        answer:
+          "Le nettoyage des hottes de cuisine en restauration est encadré par des réglementations strictes pour garantir la sécurité incendie et l’hygiène alimentaire. **Selon la norme NF EN 16282 et l’arrêté du 25 juin 1980, les hottes, filtres et conduits d’extraction doivent être entretenus régulièrement pour éviter les risques d’incendie et assurer une bonne évacuation des fumées.** \n\n**📌 Obligations principales :** \n✅ **Nettoyage périodique** (tous les 3 à 6 mois selon l’activité). \n ✅ **Entretien des filtres et des conduits d’extraction** pour éviter l'accumulation de graisses inflammables. \n ✅ **Respect des normes HACCP** pour garantir une hygiène iiréprochable en cuisine. \n  ✅ **Intervention par un professionnel certifié** pour assurer la conformité aux réglementations en vigueur. \n\n 💡 **Notre entreprise spécialisée intervient avec des équipements professionnels et délivre une attestation de nettoyage conforme aux exigences réglementaires.**",
       },
       {
         id: 4,
         question:
-          "Quels sont les avantages économiques et sanitaires d’un entretien régulier des hottes de cuisine ?",
+          "Quels sont les avantages économiques et sanitaires d'un entretien régulier des hottes de cuisine ?",
         answer:
-          "Le  nettoyage régulier des hottes permet de prolonger la durée de vie des  systèmes d’extraction, réduisant ainsi les coûts de maintenance et les  risques de panne. De plus, cela assure un environnement de travail plus  sûr et plus sain, en améliorant la qualité de l’air et en respectant les  normes sanitaires en vigueur. Un entretien rigoureux permet également  de maintenir une bonne réputation auprès des inspecteurs de sécurité et  d’hygiène.",
+          "Un mauvais entretien des hottes de cuisine peut entraîner des **risques majeurs** pour votre établissement, votre personnel et vos clients. **Voici les principaux dangers liés à l’accumulation de graisses et de résidus dans vos hottes :** \n\n 🔥 **Risque d’incendie** : La graisse accumulée dans les filtres et les conduits d’extraction est hautement inflammable. Un simple contact avec une flamme ou une étincelle peut provoquer un départ de feu. \n\n 🌫️ **Mauvaise qualité de l’air** : Une hotte encrassée ne filtre plus efficacement les fumées et vapeurs grasses, ce qui peut entraîner une pollution de l’air et des odeurs désagréables en cuisine. \n\n ⚠️ **Non-conformité aux normes d’hygiène et de sécurité** : Un manque d’entretien peut entraîner des sanctions lors des contrôles sanitaires et mettre en péril votre activité. \n\n 💰 **Surconsommation d’énergie et panne des équipements** : Une hotte mal entretenue fonctionne moins bien, ce qui augmente la consommation électrique et réduit la durée de vie de vos équipements. \n\n **Pour éviter ces risques, faites appel à notre entreprise spécialisée dans le nettoyage des hottes de cuisine. Nous garantissons un entretien complet et conforme aux normes en vigueur.**",
       },
     ],
   },

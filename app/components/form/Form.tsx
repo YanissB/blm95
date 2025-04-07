@@ -9,7 +9,7 @@ const Form = ({ page }: { page: string }) => {
   const [file, setFile] = useState<File | null>(null);
 
   return (
-    <div className="relative min-h-screen h-full w-full p-12">
+    <div className="relative min-h-screen h-full w-full p-4 md:p-12">
       <div>
         <Image
           src="/assets/contact/contact-1.png"
@@ -20,10 +20,10 @@ const Form = ({ page }: { page: string }) => {
         />
       </div>
       <div className="flex flex-col md:flex-row gap-8 p-6 max-w-6xl mx-auto relative z-10 h-full items-center">
-        <div className="flex flex-col bg-[#D9D9D980]/50 w-[667px] h-[676px] p-8 rounded-lg gap-6 shadow-md">
+        <div className="flex flex-col bg-[#D9D9D980]/50 w-full md:w-[667px] h-auto md:h-[676px] p-8 rounded-lg gap-6 shadow-md">
           <h2
             className={`text-white ${
-              page === "recrutement" ? "text-xl" : "text-5xl"
+              page === "recrutement" ? "text-xl" : "text-3xl md:text-5xl"
             } font-bold mb-4`}
           >
             {pageData?.title}
@@ -32,7 +32,7 @@ const Form = ({ page }: { page: string }) => {
             <p
               key={text.id}
               className={`text-white font-bold mb-4 ${
-                page === "recrutement" ? "text-xl" : ""
+                page === "recrutement" ? "text-lg md:text-xl" : ""
               }`}
             >
               {text.text}
@@ -57,29 +57,42 @@ const Form = ({ page }: { page: string }) => {
             </div>
           )}
         </div>
-        <div className="flex flex-col bg-[#D9D9D980]/60 w-[667px] h-[676px] p-6 rounded-lg shadow-md">
-          <form className="space-y-8">
-            <div className="grid grid-cols-2 gap-4">
+        <div className="flex flex-col bg-[#D9D9D980]/60 w-full md:w-[667px] h-auto md:h-[676px] p-6 rounded-lg shadow-md">
+          <form
+            action={
+              page === "recrutement"
+                ? "https://formspree.io/f/xdkarvbo"
+                : "https://formspree.io/f/xrbewvrv"
+            }
+            method="POST"
+            encType={page === "recrutement" ? "multipart/form-data" : ""}
+            className="space-y-8"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
+                name="nom"
                 placeholder="Nom"
                 className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
               />
               <input
                 type="text"
+                name="prenom"
                 placeholder="Prénom"
                 className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="email"
+                name="email"
                 placeholder="Adresse email"
                 className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
               />
               <input
                 type="tel"
+                name="telephone"
                 placeholder="Téléphone"
                 className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
               />
@@ -92,6 +105,7 @@ const Form = ({ page }: { page: string }) => {
                   accept="application/pdf"
                   className="mt-1 absolute opacity-0 w-full h-full cursor-pointer"
                   id="cv-upload"
+                  name="file"
                   onChange={(e) => setFile(e.target.files && e.target.files[0])}
                 />
                 <label
@@ -120,24 +134,18 @@ const Form = ({ page }: { page: string }) => {
             ) : (
               <input
                 type="text"
+                name="objet"
                 placeholder="Objet"
                 className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
               />
             )}
 
-            {page === "recrutement" ? (
-              <textarea
-                rows={8}
-                placeholder="Message"
-                className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
-              ></textarea>
-            ) : (
-              <textarea
-                rows={8}
-                placeholder="Message"
-                className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
-              ></textarea>
-            )}
+            <textarea
+              rows={8}
+              name="message"
+              placeholder="Message"
+              className="mt-1 text-black block w-full rounded-lg border border-gray-300 px-4 py-5 bg-white/80 placeholder-gray-700"
+            ></textarea>
 
             <button
               type="submit"

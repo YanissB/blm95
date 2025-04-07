@@ -9,17 +9,17 @@ const Prestations = () => {
       <h2 className="text-black text-center text-5xl font-bold ">
         Nos <span className="text-[#FF6633]">prestations</span>
       </h2>
-      <div className="flex justify-center gap-14">
+      <div className="flex flex-col md:flex-row justify-center gap-14">
         {prestationsHelperData.map((prestation) => (
           <div
             key={prestation.id}
-            className="flex flex-col w-[323px] justify-between"
+            className="flex flex-col w-full md:w-[323px] justify-between mb-8 md:mb-0"
           >
-            <div className="text-black  space-y-6">
+            <div className="text-black space-y-6">
               <Image
                 src={prestation.image}
                 alt={prestation.title}
-                className="prestation-image"
+                className="prestation-image w-full"
                 width={323}
                 height={323}
               />
@@ -29,7 +29,7 @@ const Prestations = () => {
             <div className="shadow-2xl">
               <Link
                 href={prestation.href}
-                className="bg-[#1BAC7D] w-[216px] text-white font-bold text-xl px-12 py-3 rounded-xl border border-[#1BAC7D] hover:bg-transparent hover:text-[#1BAC7D] transition-colors"
+                className="bg-[#1BAC7D]  mx-auto w-[216px] text-white font-bold text-xl px-12 py-3 rounded-xl border border-[#1BAC7D] hover:bg-transparent hover:text-[#1BAC7D] transition-colors"
               >
                 En savoir plus
               </Link>

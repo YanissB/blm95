@@ -20,8 +20,8 @@ const BeforeAfterCarousel = () => {
   };
 
   return (
-    <div className="flex bg-[#F1F1F1] justify-evenly items-center py-12">
-      <div className=" w-[640px] px-10  py-12 items-center text-black bg-white rounded-2xl shadow-2xl">
+    <div className="flex flex-col md:flex-row bg-[#F1F1F1] justify-evenly items-center py-8 sm:py-12 space-y-8 md:space-y-0">
+      <div className="w-full md:w-[640px] px-4 md:px-10 py-8 md:py-12 items-center text-black bg-white rounded-2xl shadow-2xl">
         <h2 className="text-5xl text-left font-bold mb-8">
           Pourquoi <span className="text-[#FF6633]">BLM ?</span>
         </h2>
@@ -49,19 +49,8 @@ const BeforeAfterCarousel = () => {
           </li>
         </ul>
       </div>
-      <div className="flex relative">
-        <button
-          onClick={handlePrevClick}
-          className="carousel-button absolute -left-7 top-1/2 -translate-y-1/2 z-10"
-        >
-          <Image
-            src="/assets/home/before-after-carousel/left-arrow.png"
-            alt="Précédent"
-            width={58}
-            height={58}
-          />
-        </button>
-        <div className="w-[664px] h-[468px] relative overflow-hidden ">
+      <div className="flex relative flex-col items-center w-full md:w-auto">
+        <div className="w-full md:w-[664px] h-[300px] md:h-[468px] relative overflow-hidden">
           <div className="relative">
             {beforeAfterCarouselAssets.map((asset, index) => (
               <div
@@ -81,9 +70,40 @@ const BeforeAfterCarousel = () => {
             ))}
           </div>
         </div>
+
+        <div className="flex justify-center space-x-4 mt-4 md:hidden">
+          <button onClick={handlePrevClick}>
+            <Image
+              src="/assets/home/before-after-carousel/left-arrow.png"
+              alt="Précédent"
+              width={48}
+              height={48}
+            />
+          </button>
+          <button onClick={handleNextClick}>
+            <Image
+              src="/assets/home/before-after-carousel/right-arrow.png"
+              alt="Suivant"
+              width={48}
+              height={48}
+            />
+          </button>
+        </div>
+
+        <button
+          onClick={handlePrevClick}
+          className="hidden md:block absolute -left-7 top-1/2 -translate-y-1/2 z-10"
+        >
+          <Image
+            src="/assets/home/before-after-carousel/left-arrow.png"
+            alt="Précédent"
+            width={58}
+            height={58}
+          />
+        </button>
         <button
           onClick={handleNextClick}
-          className="carousel-button absolute -right-7 top-1/2 -translate-y-1/2 z-10"
+          className="hidden md:block absolute -right-7 top-1/2 -translate-y-1/2 z-10"
         >
           <Image
             src="/assets/home/before-after-carousel/right-arrow.png"

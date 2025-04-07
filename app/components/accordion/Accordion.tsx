@@ -15,18 +15,18 @@ export default function Accordion({ page }: { page: string }) {
   if (!accordion) return null;
 
   return (
-    <div className="flex flex-col text-black p-12 gap-12">
-      <h2 className="text-3xl font-bold">
+    <div className="flex flex-col text-black p-6 md:p-12 gap-6 md:gap-12">
+      <h2 className="text-2xl md:text-3xl font-bold">
         En savoir <span className="text-[#FF6633]">plus</span>
       </h2>
-      <div className="w-1/2 h-[2px] bg-black " />
+      <div className="w-full md:w-1/2 h-[2px] bg-black " />
       {accordion.accordion.map((item) => (
         <div key={item.id} className="w-full flex-col items-center space-y-4">
           <div
             className={`transition-all duration-300 ease-in-out flex items-center justify-between cursor-pointer`}
             onClick={() => toggleAccordion(item.id)}
           >
-            <p className="w-1/2 text-xl mb-8 font-bold cursor-pointer">
+            <p className="w-full md:w-1/2 text-lg md:text-xl mb-4 md:mb-8 font-bold cursor-pointer">
               {item.question}
             </p>
             <Image
@@ -40,8 +40,12 @@ export default function Accordion({ page }: { page: string }) {
             />
           </div>
           {openIndex === item.id && (
-            <div>
-              <p className="text-xl">{item.answer}</p>
+            <div className="text-lg md:text-xl whitespace-pre-line">
+              {item.answer
+                .split("**")
+                .map((part, index) =>
+                  index % 2 === 0 ? part : <strong key={index}>{part}</strong>
+                )}
             </div>
           )}
 
